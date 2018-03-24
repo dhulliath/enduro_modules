@@ -1,4 +1,5 @@
 These are various modules I've written for use with the [Enduro](https://github.com/Gottwik/Enduro) CMS, organized by how they fit into Enduro's structure. MIT license. Have fun. 
+There's no guarantee these'll work directly out of the box; I'm awful at testing all use cases. At the least you'll have a decent starting point.
 
 # Abstractors
 
