@@ -23,7 +23,7 @@ Similar to the pre-existing markdown functions already out there, except this re
 
 ## sort_this_by.js
 Takes a given context, sorts the values by the specified property, and returns the resorted array (does not mutate the CMS).
-Can be nested for multiple sorting parameters.
+Can be nested for multiple sorting parameters. You can use decimal notation to sort by subproperties.
 ##### Usage
 ```
 {{#sort_this_by context property}}
