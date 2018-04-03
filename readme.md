@@ -3,6 +3,44 @@ There's no guarantee these'll work directly out of the box; I'm awful at testing
 
 # Abstractors
 
+## optionated.js
+Creates a globalizer-friendly object from an admin user definable array. Potentially dangerous if used array objects are deleted before unlinked.
+#### Usage
+```
+{
+	someArray: [
+		{
+			id: 'whatevs',
+			value: 'wha'
+		},
+		{
+			id: 'foo',
+			value: 'bar'
+		}
+	],
+	optionated: {
+		someArray: 'id'
+	}
+}
+```
+will add this to the context:
+```
+{
+	someArray_optionated: {
+		whatevs: {
+			id: 'whatevs',
+			value: 'wha'
+		},
+		foo: {
+			id: 'foo',
+			value: 'bar'
+		}
+	}
+}
+```
+#### required node modules
+* None
+
 ## sass.js
 The intention for this is to allow admin interface users to easily change stylesheet variables.
 Create a sass object anywhere in the cms templates (I suggest global, but it doesn't really matter). The extra properties `sass_file` and `sass_prefix` will be automatically added. Values in the `sass` object are translated into a scss map variable and written to `sass_file` in /assets/css/ as the variable `sass_prefix`. 
@@ -10,7 +48,7 @@ Scss recompilation for production servers is thought to work (script triggers th
 ##### required node modules
 * [json-sass](https://www.npmjs.com/package/json-sass)
 
-# HBS_Helpers
+# HBS Helpers
 
 ## marked.js
 Similar to the pre-existing markdown functions already out there, except this renders the markdown for render instead of adding it directly to the .js structure. Disadvantage is it does not generate header links, advantage is that any property can be rendered with markdown.
