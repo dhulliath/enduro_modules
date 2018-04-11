@@ -23,9 +23,15 @@
 //This will add the following key to the context:
 {
 	settings_optionated: {
-		name: {},
-		one: {},
-		two: {}
+		test: {
+			name: 'test'
+		},
+		one: {
+			name: 'one'
+		},
+		two: {
+			name: 'two'
+		}
 	}
 }
 */
