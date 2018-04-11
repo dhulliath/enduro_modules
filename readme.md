@@ -51,7 +51,7 @@ Scss recompilation for production servers is thought to work (script triggers th
 # HBS Helpers
 
 ## marked.js
-Similar to the pre-existing markdown functions already out there, except this renders the markdown for render instead of adding it directly to the .js structure. Disadvantage is it does not generate header links, advantage is that any property can be rendered with markdown.
+Similar to the pre-existing markdown functions already out there, except this renders the markdown on page render instead of adding it directly to the .js structure. Disadvantage is it does not generate header links, advantage is that any property can be rendered with markdown.
 ##### Usage
 ```
 {{{marked property}}}
